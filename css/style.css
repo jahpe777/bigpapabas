@@ -4801,17 +4801,13 @@ Back To Top Section
 
 /*# sourceMappingURL=style.css.map */
 
-#bigpapabas-gym {
-  max-width: 600px;
-  max-height: 400px;
-}
-
 #bigpapabas-logo {
-  max-width: 100px;
-  max-height: 50px;
+  max-width: 150px;
+  max-height: 75px;
 }
 
-#banner-image {
-  max-width: 100vw;
-  max-height: 100vh;
+#bigpapabas-logo-bottom {
+  max-width: 400px;
+  max-height: 200px;
+  margin: 0px;
 }
