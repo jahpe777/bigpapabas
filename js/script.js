@@ -1,19 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
   'use strict';
 
   /* =================================
 	LOADER 
 	=================================== */
-  $('.loader')
-    .delay(400)
-    .fadeOut();
-  $('.animationload')
-    .delay(400)
-    .fadeOut('fast');
+  $('.loader').delay(400).fadeOut();
+  $('.animationload').delay(400).fadeOut('fast');
 
   var bgi = $('[data-background]');
   bgi.length > 0 &&
-    bgi.each(function() {
+    bgi.each(function () {
       var e = $(this),
         t = e.attr('data-background');
       e.css({ 'background-image': 'url(' + t + ')' });
@@ -21,7 +17,7 @@ $(document).ready(function() {
 
   var progressBar = $('.progress-bar');
   progressBar.length > 0 &&
-    progressBar.each(function() {
+    progressBar.each(function () {
       var e = $(this),
         t = e.attr('aria-valuenow');
       e.css({ width: t + '%' });
@@ -30,19 +26,17 @@ $(document).ready(function() {
   /* =================================
 	SCROLL TO
 	=================================== */
-  $('a[href^="#"]').on('click', function(event) {
+  $('a[href^="#"]').on('click', function (event) {
     var target = $(this.getAttribute('href'));
 
     if (target.length) {
       event.preventDefault();
-      $('html, body')
-        .stop()
-        .animate(
-          {
-            scrollTop: target.offset().top
-          },
-          1000
-        );
+      $('html, body').stop().animate(
+        {
+          scrollTop: target.offset().top,
+        },
+        1000
+      );
     }
   });
 
@@ -59,7 +53,7 @@ $(document).ready(function() {
     navbar.addClass('stiky');
     navbarnav.addClass('ml-auto');
   }
-  jQuery(window).scroll(function() {
+  jQuery(window).scroll(function () {
     top = jQuery(document).scrollTop();
 
     if (top > batas) {
@@ -80,7 +74,7 @@ $(document).ready(function() {
 	=================================== */
   var slides = $('.full-screen'),
     b = slides.find('.item');
-  b.each(function() {
+  b.each(function () {
     var e = $(this),
       ocImg = e.find('img').attr('src');
     e.css({ 'background-image': 'url(' + ocImg + ')' });
@@ -94,10 +88,10 @@ $(document).ready(function() {
     dots: false,
     navText: [
       '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+      '<i class="fa fa-angle-right" aria-hidden="true"></i>',
     ],
     navContainer: '.banner .custom-nav',
-    items: 1
+    items: 1,
   });
 
   /* =================================
@@ -113,7 +107,7 @@ $(document).ready(function() {
     $back_to_top = $('.cd-top');
 
   //hide or show the "back to top" link
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     $(this).scrollTop() > offset
       ? $back_to_top.addClass('cd-is-visible')
       : $back_to_top.removeClass('cd-is-visible cd-fade-out');
@@ -123,11 +117,11 @@ $(document).ready(function() {
   });
 
   //smooth scroll to top
-  $back_to_top.on('click', function(event) {
+  $back_to_top.on('click', function (event) {
     event.preventDefault();
     $('body,html').animate(
       {
-        scrollTop: 0
+        scrollTop: 0,
       },
       scroll_top_duration
     );
@@ -140,7 +134,7 @@ $(document).ready(function() {
   carousel_1.owlCarousel({
     loop: true,
     nav: false,
-    items: 1
+    items: 1,
   });
 
   /* =================================
@@ -153,7 +147,7 @@ $(document).ready(function() {
     removalDelay: 160,
     preloader: false,
 
-    fixedContentPos: false
+    fixedContentPos: false,
   });
 
   $('.grid, .popup-gallery').magnificPopup({
@@ -164,13 +158,31 @@ $(document).ready(function() {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1]
+      preload: [0, 1],
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
+      titleSrc: function (item) {
         return item.el.attr('title') + '';
-      }
-    }
+      },
+    },
   });
+
+  const tl = new TimelineMax();
+
+  function toggleAnimation() {
+    width = $(window).width();
+
+    if (width >= 414) {
+      tl.fromTo(
+        projectImage,
+        2,
+        { width: '0%' },
+        { width: '75%', ease: Power2.easeInOut }
+      );
+    } else {
+      return '';
+    }
+  }
+  toggleAnimation();
 });

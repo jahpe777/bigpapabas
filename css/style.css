@@ -4801,6 +4801,12 @@ Back To Top Section
 
 /*# sourceMappingURL=style.css.map */
 
+.bigpapabas {
+  max-width: 125px;
+  max-height: 60px;
+  z-index: 2 !important;
+}
+
 #bigpapabas-logo {
   max-width: 125px;
   max-height: 60px;
