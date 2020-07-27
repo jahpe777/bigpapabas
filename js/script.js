@@ -72,27 +72,27 @@ $(document).ready(function () {
   /* =================================
 	BANNER ROTATOR IMAGE 
 	=================================== */
-  var slides = $('.full-screen'),
-    b = slides.find('.item');
-  b.each(function () {
-    var e = $(this),
-      ocImg = e.find('img').attr('src');
-    e.css({ 'background-image': 'url(' + ocImg + ')' });
-  });
+  // var slides = $('.full-screen'),
+  //   b = slides.find('.item');
+  // b.each(function () {
+  //   var e = $(this),
+  //     ocImg = e.find('img').attr('src');
+  //   e.css({ 'background-image': 'url(' + ocImg + ')' });
+  // });
 
-  slides.owlCarousel({
-    // stagePadding: 50,
-    loop: true,
-    // margin: 10,
-    nav: true,
-    dots: false,
-    navText: [
-      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-    ],
-    navContainer: '.banner .custom-nav',
-    items: 1,
-  });
+  // slides.owlCarousel({
+  //   // stagePadding: 50,
+  //   loop: true,
+  //   // margin: 10,
+  //   nav: true,
+  //   dots: false,
+  //   navText: [
+  //     '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+  //     '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+  //   ],
+  //   navContainer: '.banner .custom-nav',
+  //   items: 1,
+  // });
 
   /* =================================
 	BACK TO TOP 
@@ -130,59 +130,65 @@ $(document).ready(function () {
   /* =================================
 	OWL
 	=================================== */
-  var carousel_1 = $('.testimonial-caro');
-  carousel_1.owlCarousel({
-    loop: true,
-    nav: false,
-    items: 1,
-  });
+  // var carousel_1 = $('.testimonial-caro');
+  // carousel_1.owlCarousel({
+  //   loop: true,
+  //   nav: false,
+  //   items: 1,
+  // });
 
   /* =================================
 	MAGNIFIC POPUP
 	=================================== */
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+  // $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+  //   disableOn: 700,
+  //   type: 'iframe',
+  //   mainClass: 'mfp-fade',
+  //   removalDelay: 160,
+  //   preloader: false,
 
-    fixedContentPos: false,
-  });
+  //   fixedContentPos: false,
+  // });
 
-  $('.grid, .popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1],
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function (item) {
-        return item.el.attr('title') + '';
-      },
-    },
-  });
-
-  const tl = new TimelineMax();
-
-  function toggleAnimation() {
-    width = $(window).width();
-
-    if (width >= 414) {
-      tl.fromTo(
-        projectImage,
-        2,
-        { width: '0%' },
-        { width: '75%', ease: Power2.easeInOut }
-      );
-    } else {
-      return '';
-    }
-  }
-  toggleAnimation();
+  // $('.grid, .popup-gallery').magnificPopup({
+  //   delegate: 'a',
+  //   type: 'image',
+  //   tLoading: 'Loading image #%curr%...',
+  //   mainClass: 'mfp-img-mobile',
+  //   gallery: {
+  //     enabled: true,
+  //     navigateByImgClick: true,
+  //     preload: [0, 1],
+  //   },
+  //   image: {
+  //     tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+  //     titleSrc: function (item) {
+  //       return item.el.attr('title') + '';
+  //     },
+  //   },
+  // });
 });
+
+/* =================================
+	Logo
+  =================================== */
+
+const projectImage = document.querySelector('.bigpapabasZoom');
+
+const tl = new TimelineMax();
+
+function toggleAnimation() {
+  width = $(window).width();
+
+  if (width >= 414) {
+    tl.fromTo(
+      projectImage,
+      2,
+      { width: '0%' },
+      { width: '75%', ease: Power2.easeInOut }
+    );
+  } else {
+    return '';
+  }
+}
+toggleAnimation();

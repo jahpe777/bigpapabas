@@ -63,6 +63,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <script src="js/vendor/modernizr.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+
   </head>
 
   <body>
@@ -109,12 +113,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#gallery">GALLERY</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto: bigpapabas@gmail.com">CONTACT</a>
+                </li>
               </ul>
               <div class="sosmed-icon float-right d-inline-flex">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <!-- <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a> -->
               </div>
             </div>
           </nav>
@@ -123,30 +130,22 @@
     </div>
 
     <!-- BANNER -->
-    <div id="oc-fullslider" class="banner">
-      <div class="owl-carousel owl-theme full-screen">
-        <div class="item">
-            <img
-            src="images/Balls.png"
-            alt="Slider"
-            id="banner-image"
-            />
-          <div class="overlay-bg">    
-          </div>
-          <div class="container d-flex align-items-center">
-            <div class="wrap-caption">
-              <h1 class="caption-heading">
-                <img
-                src="images/BigPapaBas_Logo.png"
-                alt="Big Papa Bas"
-                id="bigpapabas"
-                />
-              </h1>
-          </div>
-        </div>
-      </div>
-      <div class="custom-nav owl-nav"></div>
-    </div>		
+
+  <section class="landing">
+    <div class="app">
+      <img
+        class="bigpapabasZoom"
+        src="images/BigPapaBas_Logo.png"
+        alt="Big Papa Bas"
+        id="bigpapabas"
+      />
+      <img
+        src="images/Balls_Redefined.png"
+        alt="Slider"
+        id="banner-image"
+      />
+    </div>
+  </section>
 
     <!-- WELCOME -->
     <div class="section">
@@ -367,7 +366,7 @@ meals are delish and nutrish!
     </div>
 
     <!-- GALLERY -->
-    <div id="classes" class="section bg-gray-light">
+    <div id="gallery" class="section bg-gray-light">
       <div class="content-wrap">
         <div class="container">
           <div class="row">
@@ -580,11 +579,7 @@ meals are delish and nutrish!
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>
     <script src="js/vendor/jquery.magnific-popup.min.js"></script>
-
-    <!-- SENDMAIL -->
-    <script src="js/vendor/validator.min.js"></script>
-    <script src="js/vendor/form-scripts.js"></script>
-
+    
     <script src="js/script.js"></script>
   </body>
 </html>
