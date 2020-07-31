@@ -749,7 +749,7 @@ ul li {
 .subheading {
   margin-top: -20px;
   margin-bottom: 30px;
-  color: #999999;
+  color: black;
   font-size: 16px;
 }
 .subheading.text-center {
@@ -4838,4 +4838,35 @@ Back To Top Section
 .app {
   display: flex;
   justify-content: center;
+}
+
+#paragraph1 {
+  color: black !important;
+}
+
+#paragraph2 {
+  color: white !important;
+}
+
+/**
+ * 7. - MEDIA QUERIES
+ * -----------------------------------------------------------------------------
+ */
+
+/*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 414px) {
+  * {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  #bigpapabas {
+    max-width: 200px !important;
+
+    width: 70%;
+    position: absolute;
+    margin-top: 50px;
+    z-index: 2;
+  }
 }
