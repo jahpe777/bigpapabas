@@ -4841,10 +4841,12 @@ Back To Top Section
 
 #paragraph1 {
   color: black !important;
+  text-align: center !important;
 }
 
 #paragraph2 {
   color: white !important;
+  text-align: center !important;
 }
 
 /**
@@ -4874,6 +4876,10 @@ Back To Top Section
     margin-left: 10px;
   }
 
+  #banner-image {
+    max-height: 300px;
+  }
+
   .hide {
     display: none;
   }
@@ -4897,6 +4903,10 @@ Back To Top Section
 
   #bigpapabas-logo {
     margin-left: 10px;
+  }
+
+  #banner-image {
+    max-height: 500px;
   }
 
   .hide {
