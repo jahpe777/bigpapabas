@@ -4858,8 +4858,8 @@ Back To Top Section
 
 @media screen and (max-width: 414px) {
   #bigpapabas {
-    max-width: 300px !important;
-    top: 75px;
+    width: 300px !important;
+    top: 60px;
   }
 
   iframe {
