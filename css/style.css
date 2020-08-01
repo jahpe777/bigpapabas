@@ -4813,8 +4813,7 @@ Back To Top Section
 }
 
 #banner-image {
-  max-width: 80%;
-  max-height: 80%;
+  width: 100%;
   opacity: 75%;
   animation: fadein 3s;
 }
@@ -4875,10 +4874,6 @@ Back To Top Section
     margin-left: 10px;
   }
 
-  #banner-image {
-    max-width: 100%;
-  }
-
   .hide {
     display: none;
   }
@@ -4902,10 +4897,6 @@ Back To Top Section
 
   #bigpapabas-logo {
     margin-left: 10px;
-  }
-
-  #banner-image {
-    max-width: 100%;
   }
 
   .hide {
