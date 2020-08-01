@@ -173,7 +173,7 @@ $(document).ready(function () {
 	Logo
   =================================== */
 
-const projectImage = document.querySelector('.bigpapabasZoom');
+const projectImage = document.querySelector('#bigpapabas');
 
 const tl = new TimelineMax();
 
@@ -192,3 +192,16 @@ function toggleAnimation() {
   }
 }
 toggleAnimation();
+
+/* =================================
+	Toggle Nav Button
+  =================================== */
+
+function hideLogo() {
+  $('.navbar-toggler-icon').click(function (event) {
+    event.preventDefault();
+    var myDiv = document.getElementById('bigpapabas');
+    myDiv.classList.toggle('hide');
+  });
+}
+hideLogo();

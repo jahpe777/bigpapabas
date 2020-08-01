@@ -4856,17 +4856,59 @@ Back To Top Section
 /*# sourceMappingURL=style.css.map */
 
 @media screen and (max-width: 414px) {
-  * {
-    width: auto !important;
-    height: auto !important;
+  #bigpapabas {
+    max-width: 300px !important;
+    top: 75px;
   }
 
-  #bigpapabas {
-    max-width: 200px !important;
+  iframe {
+    width: 99%;
+  }
 
-    width: 70%;
-    position: absolute;
-    margin-top: 50px;
-    z-index: 2;
+  #bigpapabas-logo-bottom {
+    max-width: 250px;
+    max-height: 125px;
+    margin: 0px !important;
+  }
+
+  #bigpapabas-logo {
+    margin-left: 10px;
+  }
+
+  #banner-image {
+    max-width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 995px) {
+  #bigpapabas {
+    max-width: 600px !important;
+    top: 75px;
+  }
+
+  iframe {
+    width: 99%;
+  }
+
+  #bigpapabas-logo-bottom {
+    max-width: 300px;
+    max-height: 150px;
+    margin: 0px !important;
+  }
+
+  #bigpapabas-logo {
+    margin-left: 10px;
+  }
+
+  #banner-image {
+    max-width: 100%;
+  }
+
+  .hide {
+    display: none;
   }
 }
