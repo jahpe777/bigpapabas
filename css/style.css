@@ -4883,6 +4883,11 @@ Back To Top Section
   .hide {
     display: none;
   }
+
+  #bigpapabas-logo {
+    max-width: 100px;
+    max-height: 48px;
+  }
 }
 
 @media screen and (min-width: 414px) and (max-width: 995px) {
@@ -4912,4 +4917,9 @@ Back To Top Section
   .hide {
     display: none;
   }
+
+  /* #bigpapabas-logo {
+    max-width: 100px;
+    max-height: 48px;
+  } */
 }
